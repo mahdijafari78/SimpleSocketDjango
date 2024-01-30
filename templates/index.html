@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="text"></div>
+</body>
+<script>
+    websocket = new WebSocket("ws://"+location.host+"/ws/")
+    websocket.onmessage = function (data) {
+        document.getElementById("text").innerText=data.data
+    }
+
+
+</script>
+</html>
